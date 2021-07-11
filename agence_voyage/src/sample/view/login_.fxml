@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="225.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <AnchorPane layoutX="349.0" layoutY="47.0" maxWidth="294.0" prefHeight="412.0" prefWidth="284.0" style="-fx-background-color: #ffff; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="349.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="47.0">
+               <children>
+                  <Label alignment="BASELINE_CENTER" layoutX="77.0" layoutY="55.0" prefHeight="61.0" prefWidth="207.0" style="-fx-text-fill: #005063;" stylesheets="@style.css" text="S'Authentifier :" textAlignment="CENTER" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="55.0">
+                     <font>
+                        <Font name="Consolas Bold" size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="email" layoutX="77.0" layoutY="155.0" prefHeight="32.0" prefWidth="286.0" promptText="Email ou Username" style="-fx-background-color: transparent; -fx-border-color: #005063; -fx-border-width: 0px 0px 2px;" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="19.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="password" layoutX="77.0" layoutY="232.0" prefHeight="32.0" prefWidth="286.0" promptText="Mot de Passe" style="-fx-background-color: transparent; -fx-border-color: #005063; -fx-border-width: 0px 0px 2px;" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="19.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="loginButton" layoutX="46.0" layoutY="319.0" mnemonicParsing="false" onAction="#setLoginButton" style="-fx-background-color: #005063; -fx-background-radius: 5em;" stylesheets="@style.css" text="CONNEXION" textFill="WHITE" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cr" layoutX="45.0" layoutY="374.0" mnemonicParsing="false" onAction="#redirect" prefHeight="39.0" prefWidth="307.0" style="-fx-background-color: #005063; -fx-background-radius: 5em;" stylesheets="@style.css" text="S'INSCRIRE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="forgot_password" layoutX="120.0" layoutY="432.0" mnemonicParsing="false" onAction="#forgot_password" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: transparent; -fx-text-fill: #005063;" text="Mot de Passe oublié ?" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="83.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="34.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/icons8-user-locked-64.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="34.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/icons8-mot-de-passe-oublié-50.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane layoutX="59.0" layoutY="125.0" prefHeight="469.0" prefWidth="351.0" style="-fx-background-color: linear-gradient(to right top, #005063, #fff)linear-gradient(to right top, #005063, #fff); -fx-background-radius: 2em;" stylesheets="@style.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="19.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" layoutX="68.0" prefHeight="208.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="166.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/001-world-5.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label prefHeight="29.0" prefWidth="257.0" text="      TravelGO" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana Italic" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label disable="true" prefHeight="29.0" prefWidth="257.0" text="    Agence de voyage #1" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Hotels">
+   <children>
+      <AnchorPane fx:id="window" layoutX="3.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="882.0">
+         <children>
+            <TableView fx:id="table" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="639.0" layoutY="19.0" prefHeight="35.0" prefWidth="57.0" scaleShape="false" stylesheets="@style.css" AnchorPane.leftAnchor="639.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="19.0">
+              <columns>
+                <TableColumn fx:id="descrip" prefWidth="96.79998588562012" text="DESCRIPTION" />
+                <TableColumn fx:id="ShortDes" prefWidth="138.40003204345703" text="DESCRIPTION BREVE" />
+                  <TableColumn fx:id="city" prefWidth="79.199951171875" text="VILLE" />
+                  <TableColumn fx:id="adrrss" prefWidth="69.60003662109375" text="ADRESSE" />
+                  <TableColumn fx:id="prix" prefWidth="63.20001220703125" text="PRIX" />
+                  <TableColumn fx:id="image" prefWidth="67.99990844726562" text="IMAGE" />
+                  <TableColumn fx:id="idhot" minWidth="0.0" prefWidth="73.5999755859375" text="idhotel" />
+                  <TableColumn fx:id="id" prefWidth="53.60009765625" text="idhot" />
+              </columns>
+            </TableView>
+            <VBox layoutX="534.0" layoutY="236.0" prefHeight="193.0" prefWidth="328.0" style="-fx-background-color: #f0fcff;" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="534.0" AnchorPane.topAnchor="236.0">
+               <children>
+                  <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="150.0" text="Adresse :" textAlignment="CENTER" textFill="#005063">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="adresselabel" prefHeight="42.0" prefWidth="647.0" text="addresse">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="50.0" text="Ville :" textAlignment="CENTER" textFill="#005063">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="villelabel" prefHeight="35.0" prefWidth="631.0" text="ville">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="33.0" prefWidth="239.0" text="Range du Prix :" textAlignment="CENTER" textFill="#005063">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pricelabel" prefHeight="28.0" prefWidth="626.0" text="price">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <ImageView fx:id="imgView" fitHeight="339.0" fitWidth="499.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="prev" layoutX="60.0" layoutY="378.0" mnemonicParsing="false" onAction="#previous" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #005063; -fx-text-fill: #fff;" stylesheets="@style.css" text="Previous">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="269.0" layoutY="378.0" mnemonicParsing="false" onAction="#next" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #005063; -fx-text-fill: #fff;" stylesheets="@style.css" text="Next">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="597.0" layoutY="445.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="234.0" style="-fx-background-color: #005063; -fx-text-fill: #fff;" stylesheets="@style.css" text="Contacter" />
+            <VBox layoutX="529.0" layoutY="51.0" prefHeight="166.0" prefWidth="335.0" style="-fx-background-color: #f0fcff;">
+               <children>
+                  <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="150.0" text="Description :" textFill="#005063">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="desLabel" prefHeight="157.0" prefWidth="346.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

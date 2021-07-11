@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Mesreservations">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="889.0" style="-fx-background-color: #f0fcff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="43.0" layoutY="17.0" prefHeight="36.0" prefWidth="321.0" text="Mes Reservations :" textFill="#005063">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutY="79.0" prefHeight="431.0" prefWidth="870.0" stylesheets="@style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="79.0">
+         <columns>
+            <TableColumn fx:id="numero" prefWidth="124.79998779296875" text="Numero Reservation" />
+            <TableColumn fx:id="datereserv" prefWidth="102.39996337890625" text="Date Reservation" />
+            <TableColumn fx:id="Vdep" prefWidth="84.79998779296875" text="VILLE DEPART" />
+            <TableColumn fx:id="Varriv" minWidth="0.0" prefWidth="85.5999755859375" text="VILLE ARRIVE" />
+            <TableColumn fx:id="heuredeb" prefWidth="87.20001220703125" text="HEURE DEBUT" />
+            <TableColumn fx:id="libelllevoyage" prefWidth="103.99993896484375" text="LIBELLE Voyage" />
+            <TableColumn fx:id="datedeb" prefWidth="78.4000244140625" text="Date Debut" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

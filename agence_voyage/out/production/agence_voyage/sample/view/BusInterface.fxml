@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="505.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.BusController">
+   <children>
+      <TableView fx:id="table_view" layoutX="224.0" layoutY="80.0" onMouseClicked="#select" prefHeight="200.0" prefWidth="645.0" style="-fx-background-color: transparent;" stylesheets="@style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+        <columns>
+          <TableColumn fx:id="id_col_bus" prefWidth="75.0" text="ID BUS" />
+          <TableColumn fx:id="lib_col_bus" prefWidth="75.0" text="LIBELLE" />
+            <TableColumn fx:id="mat_col_bus" prefWidth="75.0" text="MATRICULATION" />
+            <TableColumn fx:id="ch_col_bus" prefWidth="75.0" text="CHAUFFEUR" />
+            <TableColumn fx:id="cat_col_bus" prefWidth="75.0" text="CATEGORIES" />
+        </columns>
+      </TableView>
+      <Pane layoutX="13.0" prefHeight="77.0" prefWidth="882.0" style="-fx-background-color: #f0fcff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="txt_cherche_bus" layoutX="203.0" layoutY="25.0" prefHeight="29.0" prefWidth="238.0" promptText="Libelle bus" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px;">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="25.0" layoutY="26.0" text="Chercher Le BUS :" textFill="#005063">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="cherche_bus" layoutX="462.0" layoutY="17.0" mnemonicParsing="false" onAction="#cherche_bus_click" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #fff; -fx-background-radius: 5em;" stylesheets="@style.css" text="Chercher" textFill="#005063">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutX="7.0" layoutY="76.0" prefHeight="446.0" prefWidth="216.0" style="-fx-background-color: #f0fcff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="76.0">
+         <children>
+            <TextField fx:id="txt_lib_bus" promptText="Libelle bus" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txt_mat_bus" promptText="Matriculation" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txt_ch_bus" promptText="Chauffeur" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txt_cat_bus" promptText="Catégorie bus" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="ajouter_bus" mnemonicParsing="false" onAction="#ajouter_bus_click" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #005063;" stylesheets="@style.css" text="Ajouter" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" top="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/icons8-plus-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="modifier_bus" mnemonicParsing="false" onAction="#modifier_bus_click" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #005063;" stylesheets="@style.css" text="Modifier" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" top="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/icons8-modifier-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="supprimer_bus" mnemonicParsing="false" onAction="#supprimer_bus_click" prefWidth="160.0" style="-fx-background-color: #005063;" stylesheets="@style.css" text="Supprimer" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" top="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/user/Desktop/TravelAgency - Copy/agence_voyage/src/sample/view/images/icons8-effacer-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

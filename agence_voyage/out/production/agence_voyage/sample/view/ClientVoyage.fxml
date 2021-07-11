@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="window" prefHeight="524.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ClientController">
+    <children>
+        <Pane layoutX="20.0" layoutY="16.0" prefHeight="70.0" prefWidth="844.0" style="-fx-background-color: #f0fcff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="50.0" layoutY="21.0" prefHeight="20.0" prefWidth="214.0" text="Interface des Voyages :" textFill="#005063">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TableView fx:id="table" layoutX="7.0" layoutY="79.0" onMouseClicked="#printvoyage" prefHeight="402.0" prefWidth="548.0" stylesheets="@style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="79.0">
+            <columns>
+                <TableColumn fx:id="idBus" prefWidth="44.799991607666016" text="ID BUS" />
+                <TableColumn fx:id="libellle" prefWidth="52.0" text="LIBELLE" />
+                <TableColumn fx:id="dateDep" minWidth="0.0" prefWidth="87.20001220703125" text="DATE DEPART" />
+                <TableColumn fx:id="Hdeb" prefWidth="87.99998474121094" text="HEURE DEBUT" />
+                <TableColumn fx:id="Harriv" prefWidth="95.20001220703125" text="HEURE ARRIVE" />
+                <TableColumn fx:id="Vdep" prefWidth="92.79998779296875" text="VILLE DEPART" />
+                <TableColumn fx:id="Varriv" prefWidth="192.0" text="VILLE ARRIVE" />
+            </columns>
+        </TableView>
+      <VBox layoutX="573.0" layoutY="70.0" prefHeight="452.0" prefWidth="318.0" style="-fx-background-color: #f0fcff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+              <Label fx:id="libaff" text="LIBELLE">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+            <Label fx:id="idbus" opacity="0.0" prefHeight="20.0" prefWidth="314.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+              <Label text="DATE DEPART">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label fx:id="Ddebaff" prefHeight="20.0" prefWidth="336.0">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label text="HEURE DEPART">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label fx:id="Hdaff" prefHeight="20.0" prefWidth="329.0">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label prefHeight="20.0" prefWidth="116.0" text="HEURE ARRIVEE">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label fx:id="Hdarriv" prefHeight="20.0" prefWidth="359.0">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label prefHeight="20.0" prefWidth="116.0" text="VILLE DEPART">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label fx:id="Vdepaff" prefHeight="20.0" prefWidth="362.0">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label prefHeight="20.0" prefWidth="116.0" text="VILLE ARRIVE">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Label fx:id="Varrivaff" prefHeight="20.0" prefWidth="343.0">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Label>
+              <Button fx:id="reserver" mnemonicParsing="false" onAction="#reservation" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #005063; -fx-background-radius: 5px; -fx-text-fill: #fff;" stylesheets="@style.css" text="RESERVER " textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="50.0" right="5.0" top="5.0" />
+               </VBox.margin>
+              </Button>
+            <Button fx:id="retourner" mnemonicParsing="false" onAction="#retourner" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #005063; -fx-background-radius: 5px; -fx-text-fill: #fff;" stylesheets="@style.css" text="Retourner" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="50.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
